@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxuryCar - Service</title>
+  <link rel="icon" href="../../image/logo.png" type="image/png">
+  <link rel="stylesheet" href="../../css/service.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="../../home.html">
+        <img src="../../image/logo.png" alt="Luxury Car Logo">
+      </a>
+    </div>
+    <div class="navbar">
+      <nav>
+        <ul> 
+          <li><a href="../../home.html">LuxuryCar</a></li>
+          <li><a href="../pricelist/Mercedes-Benz-Vietnam-Pricelist-2.pdf" target="_blank">Bảng giá</a></li>
+          <li><a href="#">Khuyến mãi & sự kiện</a></li>
+          <li><a href="services.html">Dịch vụ</a></li>
+          <li><a href="../oldcar/oldcar.html">Trao đổi xe cũ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h1>Khám phá thế giới xe sang đích thực</h1>
+    <p>Mercedes-Benz, Maybach, AMG & nhiều hơn thế nữa</p>
+    <a href="../../home.html" class="btn-primary">Xem các dòng xe</a>
+  </section>
+
+
+  <section class="section">
+    <h2>Tính phí lăn bánh</h2>
+     <div class="form-inline">
+        <select id="car-model">
+          <option value="">Chọn dòng xe</option>
+          <option value="GLC 300 4MATIC">GLC 300 4MATIC</option>
+         <option value="E 200 Exclusive">E 200 Exclusive</option>
+          <option value="C 300 AMG">C 300 AMG</option>
+        </select>
+        <select id="province">
+          <option value="">Chọn tỉnh thành</option>
+          <option value="HN">Hà Nội</option>
+          <option value="HCM">TP.HCM</option>
+          <option value="other">Tỉnh khác</option>
+        </select>
+        <button class="btn-secondary" onclick="calculateFee()">Tính ngay</button>
+      </div>
+    <div id="fee-result" style="margin-top: 20px; font-weight: bold;"></div>
+  </section>
+
+
+  <section class="section dark" id="quiz-section">
+    <h2>Bạn chưa biết chọn xe nào?</h2>
+    <p>Trả lời vài câu hỏi đơn giản, chúng tôi sẽ gợi ý ngay!</p>
+    <div id="quiz-box">
+      <button class="btn-primary" onclick="startQuiz()">Bắt đầu tư vấn</button>
+    </div>
+  </section>
+
+  <section class="section" id="compare-section">
+    <h2>So sánh các dòng xe</h2>
+    <p>Chọn 2 dòng xe để xem sự khác biệt</p>
+    <div class="form-inline">
+      <select id="compareA">
+        <option value="">Chọn xe A</option>
+        <option value="GLC 300">GLC 300 4MATIC</option>
+        <option value="E 200">E 200 Exclusive</option>
+        <option value="C 300">C 300 AMG</option>
+      </select>
+      <select id="compareB">
+        <option value="">Chọn xe B</option>
+        <option value="GLC 300">GLC 300 4MATIC</option>
+        <option value="E 200">E 200 Exclusive</option>
+        <option value="C 300">C 300 AMG</option>
+      </select>
+      <button class="btn-secondary" onclick="compareCars()">So sánh ngay</button>
+    </div>
+    <div id="compare-result" style="margin-top: 30px;"></div>
+  </section>
+
+  <section class="video-section">
+    <h2>Video giới thiệu xe</h2>
+    <div class="video-container">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/-4zsY28t76k" 
+        title="The New S-Class: World Premiere | Trailer" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>  
+
+  <section class="section">
+    <h2>Đặt lịch lái thử</h2>
+    <form class="form-grid">
+      <input type="text" placeholder="Họ tên">
+      <input type="tel" placeholder="Số điện thoại">
+      <select>
+        <option>Chọn mẫu xe</option>
+        <option>GLC 300</option>
+        <option>C 200</option>
+      </select>
+      <input type="date">
+      <button type="button" class="btn-primary" onclick="submitTestDrive()">Đặt lịch</button>
+    </form>
+  </section>
+
+  <section class="section dark">
+    <h2>Đặt lịch bảo dưỡng</h2>
+    <form class="form-grid">
+      <input type="text" placeholder="Họ tên">
+      <input type="tel" placeholder="Số điện thoại">
+      <input type="text" placeholder="Biển số xe">
+      <input type="date">
+      <button type="button" class="btn-secondary" onclick="submitMaintenance()">Đặt lịch</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>Top xe bán chạy nhất</h2>
+    <div class="top-cars">
+      <div class="car-box">
+        <img src="../../image/glc300suv.png" alt="GLC 300 SUV" />
+        <h3>🥇 GLC 300 SUV</h3>
+        <p>Lượt quan tâm: 1.2k</p>
+      </div>
+      <div class="car-box">
+        <img src="../../image/e200.png" alt="E200" />
+        <h3>🥈 E 200 Exclusive</h3>
+        <p>Lượt quan tâm: 980</p>
+      </div>
+      <div class="car-box">
+        <img src="../../image/c300amg.png" alt="C 300 AMG" />
+        <h3>🥉 C 300 AMG</h3>
+        <p>Lượt quan tâm: 870</p>
+      </div>
+    </div>
+  </section>
+
+  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop">
+    <i class="fa-solid fa-circle-arrow-up"></i>  
+  </button>
+
+  <footer class="footer">
+    <p>&copy; 2025 LuxuryCar. All rights reserved.</p>
+  </footer>
+
+  <script src="../../js/service.js"></script>
+  <script src="../../js/ontop.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxuryCar Oldcar</title>
+    <link rel="icon" href="../../image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../../css/oldcar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">LuxuryCar</div>
+        <nav>
+            <ul>
+                <li><a href="../../home.html">Trang chủ</a></li>
+                <li><a href="#car-list">Xe bán</a></li>
+                <li><a href="#sell-car">Thu mua xe</a></li>
+                <li><a href="tel:0387857338">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="overlay"></div>
+        <div class="banner-content">
+            <h1>Mua - Bán - Thu Mua Xe Cũ</h1>
+            <p>Giao dịch nhanh chóng, an toàn, giá cao.</p>
+            <a href="#sell-car" class="btn">Đăng Bán Xe</a>
+        </div>
+    </section>
+
+    <section id="car-list" class="car-list">
+        <h2>🔥 Xe Đang Bán</h2>
+        <div class="cars-container">
+            <div class="car">
+                <img src="../../image/c300amg.png" alt="c300 AMG">
+                <h3>c300 AMG</h3>
+                <p>Giá: <span>1.000.000.000VNĐ</span></p>
+                <a href="#" class="btn">Xem Ngay</a>
+            </div>
+            <div class="car">
+                <img src="../../image/amgg63.png" alt="Mercedes-Benz G63 AMG">
+                <h3>Mercedes-Benz G63 AMG</h3>
+                <p>Giá: <span>10.000.000.000VNĐ</span></p>
+                <a href="#" class="btn">Xem Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sell-car" class="sell-car">
+        <h2>🚗 Bạn muốn bán xe?</h2>
+        <p>Nhập thông tin xe của bạn, chúng tôi sẽ liên hệ ngay!</p>
+        <form action="https://formspree.io/f/xnnpgyrz" method="POST">
+            <label for="name">Họ và Tên:</label>
+            <input type="text" name="Họ và Tên" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" name="Số điện thoại" required>
+
+            <label for="carModel">Dòng xe:</label>
+            <input type="text" name="Dòng xe" required>
+
+            <label for="year">Năm sản xuất:</label>
+            <input type="number" name="Năm sản xuất" required>
+
+            <label for="price">Giá mong muốn (VNĐ):</label>
+            <input type="number" name="Giá mong muốn" required>
+
+            <button type="submit" class="btn">Gửi Thông Tin</button>
+            <p id="formMessage" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+          </form>
+        </form>
+    </section>
+
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2025 LuxuryCar | Kết Nối Với Chúng Tôi</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="../../js/ontop.js"></script>
+</body>
+</html>
+ 
